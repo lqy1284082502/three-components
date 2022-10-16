@@ -4,7 +4,7 @@ import { Header } from '../Header/Header';
 import './page.css';
 
 type User = {
-  name: string;
+  name: string
 };
 
 export const Page: React.VFC = () => {

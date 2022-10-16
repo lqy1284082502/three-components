@@ -4,14 +4,14 @@ import { Button } from '../Button/Button';
 import './header.css';
 
 type User = {
-  name: string;
+  name: string
 };
 
 interface HeaderProps {
-  user?: User;
-  onLogin: () => void;
-  onLogout: () => void;
-  onCreateAccount: () => void;
+  user?: User
+  onLogin: () => void
+  onLogout: () => void
+  onCreateAccount: () => void
 }
 
 export const Header = ({ user, onLogin, onLogout, onCreateAccount }: HeaderProps) => (
@@ -37,19 +37,21 @@ export const Header = ({ user, onLogin, onLogout, onCreateAccount }: HeaderProps
         <h1>Acme</h1>
       </div>
       <div>
-        {user ? (
+        {(user != null)
+          ? (
           <>
             <span className="welcome">
               Welcome, <b>{user.name}</b>!
             </span>
             <Button size="small" onClick={onLogout} label="Log out" />
           </>
-        ) : (
+            )
+          : (
           <>
             <Button size="small" onClick={onLogin} label="Log in" />
             <Button primary size="small" onClick={onCreateAccount} label="Sign up" />
           </>
-        )}
+            )}
       </div>
     </div>
   </header>
