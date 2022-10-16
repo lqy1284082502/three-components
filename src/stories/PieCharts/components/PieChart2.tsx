@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { SvgLineAnimation2 } from './SvglineAnimation2';
+import CountUp from 'react-countup';
 import './pieChart2.scss';
 
 const circlePath = [
@@ -151,7 +152,9 @@ export const PieChart2 = ({
               </div>
               <div className="pie-chart2-container" style={{ color }}>
                   <div className="pie-chart2-value">
-                      {value}%
+                     <div>
+                         <CountUp start={0} end={value} duration={2} decimals={2} suffix="%" useGrouping={false}/>
+                     </div>
                   </div>
               </div>
           </div>

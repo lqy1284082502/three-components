@@ -10,7 +10,7 @@ export default {
 
 const Template: ComponentStory<typeof PieChart> = (args) => <PieChart {...args} />;
 
-export const Primary = Template.bind({});
-Primary.args = {
+export const ValueChange = Template.bind({});
+ValueChange.args = {
   value: 25
 };
