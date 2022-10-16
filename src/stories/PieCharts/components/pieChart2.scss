@@ -1,0 +1,80 @@
+.test{
+  font-size: 40px;
+}
+.pie-chart2 {
+  $width: 250px;
+  $height: $width / 2;
+  // border: 1px solid #fff;
+
+  &-wrap {
+    position: relative;
+    width: $width;
+    height: $height;
+  }
+  position: relative;
+  width: $width;
+  height: $height;
+  margin-top: -40px;
+  perspective: 200;
+  -webkit-perspective: 200;
+  transform-style: preserve-3d;
+  perspective-origin: 50% 50%;
+  &-top {
+    position: absolute;
+    width: 172px;
+    height: 172px;
+    border-radius: 50%;
+    left: 50%;
+    top: 40px;
+    transform: translateX(-50%);
+    background: linear-gradient(180deg, #0b3265 -13.15%, rgba(11, 50, 101, 0) 18.55%);
+  }
+  &-percente {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    margin-left: -25px;
+    z-index: 2;
+    transform: rotateZ(180deg) rotateX(-85deg) translateY(125px);
+
+    &-light {
+      background-color: #67d5e2 !important;
+    }
+  }
+
+  .pie-svgline-wrap {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    left: 0 !important;
+    top: 0 !important;
+    z-index: 2;
+    // border: 1px solid #fff;
+    transform-origin: center;
+    transform: rotateX(85deg) scale(1) translateY(-50px);
+    .pie-svgline {
+      position: absolute;
+      left: 0 !important;
+      top: 0 !important;
+    }
+  }
+
+  &-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+  }
+  &-value {
+    text-align: center;
+    font-size: 40px;
+    font-family: "PangMenZhengDao";
+    color: #fff;
+    margin-top: 60px;
+    text-shadow: #67d5e2 0px 0px 10px;
+  }
+}
