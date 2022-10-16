@@ -23,6 +23,13 @@
         "@typescript-eslint/consistent-type-definitions": "off",
         "semi": ["error", "always"],
         "@typescript-eslint/semi": "off",
-        "react/no-unescaped-entities": "off"
+        "react/no-unescaped-entities": "off",
+        "@typescript-eslint/no-this-alias": [
+            "error",
+            {
+                "allowDestructuring": false, // Disallow `const { props, state } = this`; true by default
+                "allowedNames": ["self"] // Allow `const self = this`; `[]` by default
+            }
+        ]
     }
 }
